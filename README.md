@@ -1,1 +1,28 @@
-# FRT_Project
+# Therapeutic - A Healthcare Website
+
+Therapeutic is a comprehensive healthcare website that offers specialized medical services in the fields of Cardiology, Ophthalmology, Neurology, Psychology, and Dermatology. The project's core idea is to provide accessible and patient-centric healthcare solutions, addressing the existing challenges of long waiting times, limited access to expert care, and a lack of personalized treatment options.
+
+# Key Features:
+
+* User-friendly interface for easy navigation through departments.
+* Online appointment booking for timely access to healthcare services.
+* Embedded health bot for preliminary health information and guidance.
+* Access to highly skilled professionals and advanced medical technology.
+* Proactive health education and preventive care resources.
+
+Our project wants to bridge the gap between patients and specialized treatment by allowing users to make educated health decisions. Therapeutic helps to greater well-being and a higher quality of life by providing a seamless experience and competent medical attention.
+
+# To Visit The Website  [Click Here](https://salmon-tree-0a6837c00.3.azurestaticapps.net)
+
+# To Visit Project Demo Video [Click Here]()
+
+# Screenshots
+
+![image](https://github.com/harshavardhan-b20/FRT_Project/assets/113964278/1d214462-1acf-45b1-af67-8fd30cbf2880)
+
+![image](https://github.com/harshavardhan-b20/FRT_Project/assets/113964278/7d3f56ae-7f91-4314-a4aa-e712bc760679)
+
+https://github.com/harshavardhan-b20/FRT_Project/assets/113964278/245c1555-d44c-4897-9d3d-adcaca3c5c82
+
+
+
