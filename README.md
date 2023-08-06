@@ -35,7 +35,7 @@ https://github.com/harshavardhan-b20/FRT_Project/assets/113964278/990cbc0c-c6bb-
 https://github.com/harshavardhan-b20/FRT_Project/assets/113964278/4bf31b22-b0de-4417-83ac-498a6747146f
 
 # Technologies Used
-- Azure(Hosting)
+- Azure(For Hosting)
 - HTML
 - CSS
 - Bootstrap
