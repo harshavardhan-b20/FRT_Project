@@ -10,7 +10,7 @@ Therapeutic is a comprehensive healthcare website that offers specialized medica
 * Access to highly skilled professionals and advanced medical technology.
 * Proactive health education and preventive care resources.
 
-Our project wants to bridge the gap between patients and specialized treatment by allowing users to make educated health decisions. Therapeutic helps to greater well-being and a higher quality of life by providing a seamless experience and competent medical attention.
+ By this project we wants to bridge the gap between patients and specialized treatment by allowing users to make educated health decisions. Therapeutic helps to greater well-being and a higher quality of life by providing a seamless experience and competent medical attention.
 
 # To Visit The Website  [Click Here](https://salmon-tree-0a6837c00.3.azurestaticapps.net)
 
