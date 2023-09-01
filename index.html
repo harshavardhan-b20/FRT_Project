@@ -108,31 +108,81 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- //banner-text -->
 			</div>
 		</div>
-			 <div class="app-p1">
-				<h4>Book Your Appointment Now</h4>
-				<div class="app-sub-p1">
-					<form action="#" method="post">
-						<input type="text" name="Patient Name" placeholder="Patient Name" required=""/>
-						<div class="ag-p1">
-							<li class="dropdown menu__item">
-								<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Cardiology</a></li>
-									<li><a href="#">Ophthalmology</a></li>
-									<li><a href="#">Neurology</a></li>
-									<li><a href="#">Psychology</a></li>
-									<li><a href="#">Dermatology</a></li>
-								</ul>
-							</li>
-						</div>
+<div class="app-p1">
+<h4>Book Your Appointment Now</h4>
+<div class="app-sub-p1">
+	<form action="#" method="post" id="appointmentForm">
+        	<input type="text" name="Patient Name" placeholder="Patient Name" required=""/>
+            	<div class="ag-p1">
+                	<li class="dropdown menu__item">
+                   	 	<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments<span class="caret"></span></a>
+                    		<ul class="dropdown-menu">
+                        		<li><a href="#" data-department="Cardiology">Cardiology</a></li>
+                        		<li><a href="#" data-department="Ophthalmology">Ophthalmology</a></li>
+                        		<li><a href="#" data-department="Neurology">Neurology</a></li>
+                        		<li><a href="#" data-department="Psychology">Psychology</a></li>
+                        		<li><a href="#" data-department="Dermatology">Dermatology</a></li>
+                    		</ul>
+                    		<input type="hidden" name="Department" id="selectedDepartment" required=""/>
+                	</li>
+            	</div>
 
 
-						<input  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-						<input type="text" id="timepicker" name="Time" class="timepicker form-control" value="Hrs:Min">	
-						<input type="submit" value="Make A Appointment">
-					</form>
-				</div>
-			</div>			
+
+            	<input  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+		<input type="text" id="timepicker" name="Time" class="timepicker form-control hasWickedpicker" value="Hrs:Min" onkeypress="return false;">	
+            	<button type="submit" id="bookAppointmentBtn">Make An Appointment</button>
+        </form>
+        <div id="confirmation" style="display: none;">
+          
+            <div class="green-box">
+                <div class="circle">
+                    <span>&#10004;</span>
+                </div>
+                <p>Your Appointment has been confirmed!</p>
+                <p>Appointment Number: <span id="bookingNumber"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Department selection
+    const departmentLinks = document.querySelectorAll(".dropdown-menu a[data-department]");
+    const selectedDepartmentInput = document.getElementById("selectedDepartment");
+
+    departmentLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const selectedDepartment = this.getAttribute("data-department");
+            selectedDepartmentInput.value = selectedDepartment;
+            document.querySelector(".dropdown-toggle.menu__link").textContent = "Department: " + selectedDepartment;
+        });
+    });
+
+    // Form submission and confirmation
+    const appointmentForm = document.getElementById("appointmentForm");
+    const bookAppointmentBtn = document.getElementById("bookAppointmentBtn");
+    const confirmationDiv = document.getElementById("confirmation");
+    const bookingNumberSpan = document.getElementById("bookingNumber");
+    const formHeader = document.querySelector(".app-p1 h4");
+
+    appointmentForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // Simulate a booking process here, generate a booking number
+        const bookingNumber = Math.floor(Math.random() * 1000000);
+        bookingNumberSpan.textContent = bookingNumber;
+
+        // Update the heading text and hide the form
+        formHeader.textContent = "Appointment Confirmation";
+        appointmentForm.style.display = "none";
+        confirmationDiv.style.display = "block";
+    });
+});
+
+</script>
+		
+
 	</div>
 </div>
 <!-- //banner -->
