@@ -119,13 +119,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
         mailForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            // Simulate a successful submission
-            // You can replace this with actual server-side code
-            setTimeout(function () {
-                // Hide the form and display the confirmation message
-                mailForm.style.display = "none";
-                confirmationDiv.style.display = "block";
-            }, 2000); // Simulate a 2-second delay
+           
+            mailForm.style.display = "none";
+            confirmationDiv.style.display = "block";
+            });
         });
     });
 </script>
