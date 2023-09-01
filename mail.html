@@ -88,23 +88,59 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- mail -->
 	<div class="jarallax mail" id="mail">
-		<div class="container">
-			<h3 class="mail-p1">Mail Us<span></span></h3>
-			<div class="p1agile_mail_grids">
-				<div class=" p1agile_mail_grid">
-					<form action="#" method="post">
-						<input type="text" placeholder="Name" name="Name" required="">
-						<input type="email" placeholder="Email" name="Email" required="">
-						<textarea name="Message" placeholder="message" required=""></textarea>
-						<div class="con-form text-center">
-							<input type="submit" value="Send">
-						</div>
-					</form>
+    <div class="container">
+        <h3 class="mail-p1">Mail Us<span></span></h3>
+        <div class="p1agile_mail_grids">
+            <div class="p1agile_mail_grid">
+                <form action="#" method="post" id="mailForm">
+                    <input type="text" placeholder="Name" name="Name" required="">
+                    <input type="email" placeholder="Email" name="Email" required="">
+                    <textarea name="Message" placeholder="Message" required=""></textarea>
+                    <div class="con-form text-center">
+                        <input type="submit" value="Send" id="sendButton">
+                    </div>
+                </form>
+                <div id="confirmation" style="display: none;">
+                    <div class="green-box">
+                        <p>Your message has been sent successfully!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mailForm = document.getElementById("mailForm");
+        const sendButton = document.getElementById("sendButton");
+        const confirmationDiv = document.getElementById("confirmation");
+
+        mailForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Simulate a successful submission
+            // You can replace this with actual server-side code
+            setTimeout(function () {
+                // Hide the form and display the confirmation message
+                mailForm.style.display = "none";
+                confirmationDiv.style.display = "block";
+            }, 2000); // Simulate a 2-second delay
+        });
+    });
+</script>
+
+<style>
+    /* Style for the green box */
+    .green-box {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+
 <!-- //mail -->
 <!-- //main -->
 
