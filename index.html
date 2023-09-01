@@ -108,31 +108,48 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- //banner-text -->
 			</div>
 		</div>
-			<div class="app-p1">
-				<h4>Book Your Appointment Now</h4>
-				<div class="app-sub-p1">
-					<form action="#" method="post">
-						<input type="text" name="Patient Name" placeholder="Patient Name" required=""/>
-						<div class="ag-p1">
-							<li class="dropdown menu__item">
-								<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Cardiology</a></li>
-									<li><a href="#">Ophthalmology</a></li>
-									<li><a href="#">Neurology</a></li>
-									<li><a href="#">Psychology</a></li>
-									<li><a href="#">Dermatology</a></li>
-								</ul>
-							</li>
-						</div>
+			 <div class="app-p1">
+        <h4>Book Your Appointment Now</h4>
+        <div class="app-sub-p1">
+            <form action="#" method="post" id="appointment-form">
+                <input type="text" name="patientName" id="patientName" placeholder="Patient Name" required=""/>
+                <div class="ag-p1">
+                    <div class="dropdown menu__item">
+                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Cardiology</a></li>
+                            <li><a href="#">Ophthalmology</a></li>
+                            <li><a href="#">Neurology</a></li>
+                            <li><a href="#">Psychology</a></li>
+                            <li><a href="#">Dermatology</a></li>
+                        </ul>
+                    </div>
+                </div>
 
+                <input id="datepicker" name="date" type="text" placeholder="Select a Date" required="">
+                <input type="text" id="timepicker" name="time" class="timepicker form-control" placeholder="Select a Time">
+                <button type="button" id="submit-button">Make An Appointment</button>
+            </form>
+        </div>
+    </div>
 
-						<input  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-						<input type="text" id="timepicker" name="Time" class="timepicker form-control" value="Hrs:Min">	
-						<input type="submit" value="Make A Appointment">
-					</form>
-				</div>
-			</div>			
+    <script src="datepicker.js"></script>
+    <script src="timepicker.js"></script>
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function () {
+            const patientName = document.getElementById('patientName').value;
+            const department = document.querySelector('.dropdown-toggle.menu__link').textContent;
+            const date = document.getElementById('datepicker').value;
+            const time = document.getElementById('timepicker').value;
+
+            if (patientName && department && date && time) {
+                alert(`Appointment Details:\nPatient Name: ${patientName}\nDepartment: ${department}\nDate: ${date}\nTime: ${time}\nAppointment Successfully Scheduled!`);
+                // You can send this data to a server or perform other actions here
+            } else {
+                alert('Please fill in all the required fields.');
+            }
+        });
+  </script>
 	</div>
 </div>
 <!-- //banner -->
