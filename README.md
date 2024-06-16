@@ -14,7 +14,7 @@ Therapeutic is a comprehensive healthcare website that offers specialized medica
 
 # To Visit The Website  [Click Here](https://salmon-tree-0a6837c00.3.azurestaticapps.net)
 
-# To Visit Project Demo Video [Click Here](https://youtu.be/eu1fgNNxg9o)
+
 
 # Screenshots And Videos
 
