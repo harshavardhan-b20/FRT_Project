@@ -12,7 +12,7 @@ Therapeutic is a comprehensive healthcare website that offers specialized medica
 
  By this project we wants to bridge the gap between patients and specialized treatment by allowing users to make educated health decisions. Therapeutic helps to greater well-being and a higher quality of life by providing a seamless experience and competent medical attention.
 
-# To Visit The Website  [Click Here](https://salmon-tree-0a6837c00.3.azurestaticapps.net)
+# To Visit The Website  [Click Here](https://harshavardhan-b20.github.io/FRT_Project/)
 
 
 
